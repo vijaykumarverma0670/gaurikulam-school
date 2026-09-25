@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaurikulam International Public School</title>
+    <!-- FontAwesome Icons for UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* --- CSS STYLING --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f0f7f9;
+            color: #333;
+        }
+
+        /* HEADER & NAV */
+        header {
+            background-color: #e0f2f7;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-container img {
+            height: 70px;
+            width: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #004d66;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00acc1;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            color: #004d66;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION WITH CLEAN BACKGROUND IMAGE SLIDER */
+        .hero {
+            position: relative;
+            height: 520px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+            overflow: hidden;
+        }
+
+        /* BACKGROUND SLIDER STYLES (BLUE OVERLAY REMOVED) */
+        .hero-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: slideAnimation 16s infinite;
+        }
+
+        .slide:nth-child(1) {
+            background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            animation-delay: 0s;
+        }
+
+        .slide:nth-child(2) {
+            background-image: url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            animation-delay: 4s;
+        }
+
+        .slide:nth-child(3) {
+            background-image: url('https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            animation-delay: 8s;
+        }
+
+        .slide:nth-child(4) {
+            background-image: url('https://images.unsplash.com/photo-1523050853064-85049f3f9fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            animation-delay: 12s;
+        }
+
+        @keyframes slideAnimation {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            35% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+        }
+
+        /* HERO CONTENT OVERLAY */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 46px;
+            margin-bottom: 12px;
+            text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.85);
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            font-weight: 500;
+            max-width: 650px;
+            text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.85);
+        }
+
+        .btn-admission {
+            background-color: #00acc1;
+            color: white;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 17px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            display: inline-block;
+        }
+
+        .btn-admission:hover {
+            background-color: #004d66;
+            border-color: #00acc1;
+            transform: translateY(-3px);
+        }
+
+        /* FEATURES SECTION */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0 5%;
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            width: 300px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .card i {
+            font-size: 36px;
+            color: #00acc1;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #004d66;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* SECTION TITLES */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 30px;
+        }
+
+        .section-title h2 {
+            color: #004d66;
+            font-size: 30px;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #00acc1;
+        }
+
+        /* ACADEMICS SECTION */
+        .academics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .academic-box {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid #00acc1;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .academic-box h4 {
+            color: #004d66;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .academic-box p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* GALLERY SECTION */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            height: 200px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        /* ADMISSION ENQUIRY SECTION */
+        .enquiry-section {
+            padding: 60px 20px;
+            background-color: #e0f2f7;
+            display: flex;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .enquiry-container {
+            background: #ffffff;
+            width: 100%;
+            max-width: 750px;
+            padding: 35px 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid #004d66;
+        }
+
+        .enquiry-header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .enquiry-header h2 {
+            color: #004d66;
+            font-size: 26px;
+            margin-bottom: 6px;
+        }
+
+        .enquiry-header p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #004d66;
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #00acc1;
+        }
+
+        .submit-btn {
+            background-color: #004d66;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #00acc1;
+        }
+
+        .form-result {
+            margin-top: 15px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #003344;
+            color: white;
+            padding: 40px 5% 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 25px;
+        }
+
+        .contact-info p {
+            color: #ccc;
+            font-size: 14px;
+            margin: 6px 0;
+        }
+
+        .login-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .login-btn {
+            background: #00acc1;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #008ba3;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            color: #aaa;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            width: 320px;
+            text-align: center;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            cursor: pointer;
+            font-size: 22px;
+            color: #777;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #e0f2f7;
+                padding: 15px 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .hero h2 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="home">
+        <div class="header-top">
+            <div class="logo-container">
+                <img src="logo.png" alt="Gaurikulam School Logo"
+                    onerror="this.src='https://via.placeholder.com/200x70?text=Gaurikulam+School'">
+            </div>
+            <div class="menu-toggle" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#academics">Academics</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#admission">Admission</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH CLEAN BACKGROUND IMAGE SLIDER -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+        <div class="hero-content">
+            <h2>Welcome to Gaurikulam</h2>
+            <p>A Nurturing Environment for Holistic Education & Future Leaders</p>
+            <a href="#admission" class="btn-admission">Explore Admissions 2026-27</a>
+        </div>
+    </section>
+
+    <section id="about" class="features">
+        <div class="card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>High Academic Standards</h3>
+            <p>Providing top-tier education with modern learning methods and regular assessments.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-user-tie"></i>
+            <h3>Expert Faculty</h3>
+            <p>Learn from highly qualified teachers with years of experience in Delhi & Kota coaching.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-school"></i>
+            <h3>Modern Campus</h3>
+            <p>CCTV surveillance, smart classrooms, and a safe environment for every student.</p>
+        </div>
+    </section>
+
+    <!-- ACADEMICS SECTION -->
+    <section id="academics">
+        <div class="section-title">
+            <h2>Our Academics</h2>
+        </div>
+        <div class="academics-grid">
+            <div class="academic-box">
+                <h4>Primary Wing (Nursery - Class 5)</h4>
+                <p>Activity-based learning focusing on foundational literacy, numeracy, and soft skill development.</p>
+            </div>
+            <div class="academic-box">
+                <h4>Middle Wing (Class 6 - 8)</h4>
+                <p>Conceptual learning with practical science labs, coding basics, and interactive problem solving.</p>
+            </div>
+            <div class="academic-box">
+                <h4>Secondary Wing (Class 9 - 12)</h4>
+                <p>Specialized coaching for Board Exams & Competitive Entrance exams (IIT-JEE / NEET foundation).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery">
+        <div class="section-title">
+            <h2>Campus Gallery</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80"
+                    alt="Classroom">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80"
+                    alt="Library">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80"
+                    alt="Computer Lab">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?auto=format&fit=crop&w=600&q=80"
+                    alt="Sports Grounds">
+            </div>
+        </div>
+    </section>
+
+    <!-- ADMISSION ENQUIRY SECTION -->
+    <section id="admission" class="enquiry-section">
+        <div class="enquiry-container">
+            <div class="enquiry-header">
+                <h2>Admission Enquiry (2026-27)</h2>
+                <p>Fill out the form below and our admission team will contact you shortly.</p>
+            </div>
+
+            <form id="admissionForm">
+                <input type="hidden" name="access_key" value="64b5aabd-3dfe-4d26-bdb0-94380ac7bdd9">
+                <input type="hidden" name="subject" value="New Admission Enquiry - Gaurikulam School">
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="studentName">Student Full Name *</label>
+                        <input type="text" id="studentName" name="Student Name" placeholder="Enter student's name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="parentName">Parent / Guardian Name *</label>
+                        <input type="text" id="parentName" name="Parent Name" placeholder="Enter parent's name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="classApplying">Class Seeking Admission *</label>
+                        <select id="classApplying" name="Class Seeking" required>
+                            <option value="" disabled selected>Select Class</option>
+                            <option value="Nursery / LKG / UKG">Nursery / LKG / UKG</option>
+                            <option value="Class 1 - 5">Class 1 to 5</option>
+                            <option value="Class 6 - 8">Class 6 to 8</option>
+                            <option value="Class 9 - 10">Class 9 to 10</option>
+                            <option value="Class 11 - 12">Class 11 to 12</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Mobile Number *</label>
+                        <input type="tel" id="phone" name="Phone Number" pattern="[0-9]{10}"
+                            placeholder="10-digit phone number" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="message">Message / Query (Optional)</label>
+                        <textarea id="message" name="Message" rows="3" placeholder="Any specific questions?"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Submit Enquiry</button>
+                <div id="formResult" class="form-result"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>Gaurikulam International Public School</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Address: Jalkhoridih, Giridih, Jharkhand</p>
+                <p><i class="fas fa-phone"></i> Call: +91 9958766895</p>
+            </div>
+            <div class="login-buttons">
+                <button class="login-btn" onclick="openModal('Student')"><i class="fas fa-user-graduate"></i> Student
+                    Login</button>
+                <button class="login-btn" onclick="openModal('School')"><i class="fas fa-user-shield"></i> School
+                    Login</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Gaurikulam International Public School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" style="color:#004d66; margin-bottom: 15px;">Login</h2>
+            <input type="text" placeholder="User ID"
+                style="width:100%; padding:10px; margin-top:10px; border:1px solid #ccc; border-radius:4px;">
+            <input type="password" placeholder="Password"
+                style="width:100%; padding:10px; margin-top:10px; border:1px solid #ccc; border-radius:4px;">
+            <button
+                style="width:100%; padding:10px; background:#00acc1; color:white; border:none; margin-top:15px; cursor:pointer; border-radius:4px; font-weight:bold;">Login</button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close Mobile Menu on Click
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Modal Controls
+        function openModal(type) {
+            document.getElementById('loginModal').style.display = 'flex';
+            document.getElementById('modalTitle').innerText = type + " Login";
+        }
+        function closeModal() {
+            document.getElementById('loginModal').style.display = 'none';
+        }
+
+        // Web3Forms Form Submission
+        const form = document.getElementById('admissionForm');
+        const result = document.getElementById('formResult');
+        const submitBtn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            submitBtn.innerText = "Sending...";
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let res = await response.json();
+                    if (response.status == 200) {
+                        result.style.color = "#28a745";
+                        result.innerText = "Thank you! Enquiry submitted successfully.";
+                        form.reset();
+                    } else {
+                        result.style.color = "#dc3545";
+                        result.innerText = res.message || "Invalid Access Key!";
+                    }
+                })
+                .catch(error => {
+                    result.style.color = "#dc3545";
+                    result.innerText = "Error submitting form. Please check your connection.";
+                })
+                .finally(() => {
+                    submitBtn.innerText = "Submit Enquiry";
+                    submitBtn.disabled = false;
+                    setTimeout(() => {
+                        result.innerText = "";
+                    }, 6000);
+                });
+        });
+    </script>
+
+</body>
+
+</html>
