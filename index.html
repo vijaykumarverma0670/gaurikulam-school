@@ -52,7 +52,7 @@
         nav ul {
             list-style: none;
             display: flex;
-            gap: 25px;
+            gap: 20px;
         }
 
         nav ul li a {
@@ -88,7 +88,6 @@
             overflow: hidden;
         }
 
-        /* BACKGROUND SLIDER STYLES (BLUE OVERLAY REMOVED) */
         .hero-slider {
             position: absolute;
             top: 0;
@@ -152,7 +151,6 @@
             }
         }
 
-        /* HERO CONTENT OVERLAY */
         .hero-content {
             position: relative;
             z-index: 2;
@@ -262,6 +260,75 @@
             background-color: #00acc1;
         }
 
+        /* --- DIRECTOR ABOUT SECTION --- */
+        .director-about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        .director-img-wrapper {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .director-img-wrapper img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+            border: 4px solid #e0f2f7;
+        }
+
+        .director-text-wrapper {
+            flex: 1.5;
+            min-width: 300px;
+            padding: 30px 20px;
+        }
+
+        .director-badge {
+            background-color: #e0f2f7;
+            color: #004d66;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+
+        .director-text-wrapper h3 {
+            font-size: 28px;
+            color: #004d66;
+            margin-bottom: 5px;
+        }
+
+        .director-text-wrapper h5 {
+            font-size: 16px;
+            color: #00acc1;
+            margin-bottom: 18px;
+            font-weight: 600;
+        }
+
+        .director-text-wrapper p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
         /* ACADEMICS SECTION */
         .academics-grid {
             display: grid;
@@ -292,6 +359,209 @@
             line-height: 1.5;
         }
 
+        /* TRANSPORT FACILITY */
+        .transport-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .transport-text {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .transport-text h3 {
+            color: #004d66;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+
+        .transport-text ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .transport-text ul li {
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .transport-text ul li i {
+            color: #00acc1;
+            margin-right: 10px;
+        }
+
+        .transport-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .transport-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* FEE STRUCTURE */
+        .fee-table-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+            overflow-x: auto;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .fee-table th,
+        .fee-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .fee-table th {
+            background-color: #004d66;
+            color: white;
+            font-weight: 600;
+        }
+
+        .fee-table tr:nth-child(even) {
+            background-color: #f9fbfd;
+        }
+
+        .fee-table tr:hover {
+            background-color: #e0f2f7;
+        }
+
+        /* RESULT AREA & DIRECTOR PUBLISH */
+        .result-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .result-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .result-select-group {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .result-select-group select {
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .btn-view-result {
+            background-color: #00acc1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-view-result:hover {
+            background-color: #004d66;
+        }
+
+        .result-display-area {
+            margin-top: 25px;
+            padding: 20px;
+            background: #f8fafc;
+            border: 1px dashed #00acc1;
+            border-radius: 8px;
+        }
+
+        .pdf-btn {
+            display: inline-block;
+            background: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .pdf-btn:hover {
+            background: #bd2130;
+        }
+
+        /* DIRECTOR DASHBOARD STYLES */
+        .director-panel {
+            display: none;
+            background: #fff;
+            border: 2px solid #004d66;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .director-panel h4 {
+            color: #004d66;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e0f2f7;
+        }
+
+        .director-form-group {
+            margin-bottom: 15px;
+        }
+
+        .director-form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #004d66;
+        }
+
+        .director-form-group input,
+        .director-form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
         /* GALLERY SECTION */
         .gallery-grid {
             display: grid;
@@ -303,6 +573,7 @@
         }
 
         .gallery-item {
+            position: relative;
             overflow: hidden;
             border-radius: 8px;
             height: 200px;
@@ -318,6 +589,32 @@
 
         .gallery-item:hover img {
             transform: scale(1.08);
+        }
+
+        .btn-delete-img {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(220, 53, 69, 0.85);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            z-index: 10;
+        }
+
+        .btn-delete-img:hover {
+            background: #dc3545;
+        }
+
+        .director-mode .btn-delete-img {
+            display: flex;
         }
 
         /* ADMISSION ENQUIRY SECTION */
@@ -491,7 +788,7 @@
             background: white;
             padding: 30px;
             border-radius: 8px;
-            width: 320px;
+            width: 340px;
             text-align: center;
             position: relative;
         }
@@ -534,6 +831,10 @@
             .hero p {
                 font-size: 16px;
             }
+
+            .director-about-container {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -552,8 +853,12 @@
             <nav>
                 <ul id="navLinks">
                     <li><a href="#home">Home</a></li>
+                    <li><a href="#director-about">Director's Message</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#academics">Academics</a></li>
+                    <li><a href="#transport">Transport</a></li>
+                    <li><a href="#fee-structure">Fee Structure</a></li>
+                    <li><a href="#results">Results</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#admission">Admission</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -574,6 +879,37 @@
             <h2>Welcome to Gaurikulam</h2>
             <p>A Nurturing Environment for Holistic Education & Future Leaders</p>
             <a href="#admission" class="btn-admission">Explore Admissions 2026-27</a>
+        </div>
+    </section>
+
+    <!-- DIRECTOR ABOUT SECTION -->
+    <section id="director-about" style="padding-top: 40px;">
+        <div class="section-title">
+            <h2>Director's Desk</h2>
+        </div>
+        <div class="director-about-container">
+            <div class="director-img-wrapper">
+                <img id="directorDisplayPhoto"
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80"
+                    alt="Director Photo">
+            </div>
+            <div class="director-text-wrapper">
+                <span class="director-badge"><i class="fas fa-award"></i> 9+ Years of Teaching Experience</span>
+                <h3>Welcome to Gaurikulam School</h3>
+                <h5>Message from the Director</h5>
+                <p>
+                    Greetings to all students and parents! With over <strong>9+ years of dedicated experience in
+                        education and teaching</strong>, my vision for <strong>Gaurikulam International Public
+                        School</strong> has always been to nurture young minds with strong conceptual foundation and
+                    core ethical values.
+                </p>
+                <p>
+                    We aim to bring modern educational practices, smart classrooms, competitive exam preparation
+                    (IIT-JEE/NEET basic foundation), and discipline right here to Jalkhoridih, Giridih. Our continuous
+                    endeavor is to provide a safe, inspiring, and innovative learning ecosystem where every child can
+                    flourish.
+                </p>
+            </div>
         </div>
     </section>
 
@@ -616,28 +952,185 @@
         </div>
     </section>
 
+    <!-- TRANSPORT FACILITY SECTION -->
+    <section id="transport">
+        <div class="section-title">
+            <h2>Transport Facility</h2>
+        </div>
+        <div class="transport-container">
+            <div class="transport-text">
+                <h3>Safe & Reliable Bus/Van Service</h3>
+                <p>Gaurikulam International Public School offers safe and comfortable transport facility for students
+                    covering nearby local routes.</p>
+                <ul>
+                    <li><i class="fas fa-bus"></i> Well-maintained Vans and Buses for all routes.</li>
+                    <li><i class="fas fa-user-shield"></i> Experienced and verified drivers and attendants.</li>
+                    <li><i class="fas fa-video"></i> Speed governors and GPS tracking safety features.</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Coverage across Jalkhoridih and adjacent areas of Giridih.
+                    </li>
+                </ul>
+            </div>
+            <div class="transport-image">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=800&q=80"
+                    alt="School Transport Van/Bus">
+            </div>
+        </div>
+    </section>
+
+    <!-- FEE STRUCTURE SECTION -->
+    <section id="fee-structure">
+        <div class="section-title">
+            <h2>Fee Structure (Session 2026-27)</h2>
+        </div>
+        <div class="fee-table-container">
+            <table class="fee-table" id="feeTable">
+                <thead>
+                    <tr>
+                        <th>Class Wing</th>
+                        <th>Admission Fee (One Time)</th>
+                        <th>Monthly Tuition Fee</th>
+                        <th>Van / Transport Fee</th>
+                        <th class="director-action-col" style="display:none;">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="feeTableBody">
+                    <!-- Dynamic Fee Structure will load here -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- RESULT AREA SECTION (STUDENT & DIRECTOR PORTAL) -->
+    <section id="results">
+        <div class="section-title">
+            <h2>Student Result Portal</h2>
+        </div>
+        <div class="result-section">
+            <div class="result-card">
+                <h3>Check Class Result</h3>
+                <p>Select your class below to view or download the updated Class Result PDF published by Director.</p>
+
+                <div class="result-select-group">
+                    <select id="studentClassSelect">
+                        <option value="" disabled selected>Select Your Class</option>
+                        <option value="Class 1">Class 1</option>
+                        <option value="Class 2">Class 2</option>
+                        <option value="Class 3">Class 3</option>
+                        <option value="Class 4">Class 4</option>
+                        <option value="Class 5">Class 5</option>
+                        <option value="Class 6">Class 6</option>
+                        <option value="Class 7">Class 7</option>
+                        <option value="Class 8">Class 8</option>
+                        <option value="Class 9">Class 9</option>
+                        <option value="Class 10">Class 10</option>
+                        <option value="Class 11">Class 11</option>
+                        <option value="Class 12">Class 12</option>
+                    </select>
+                    <button class="btn-view-result" onclick="fetchResult()">View Result</button>
+                </div>
+
+                <div id="resultOutput" class="result-display-area">
+                    <p style="color:#777;">Please select a class and click "View Result".</p>
+                </div>
+
+                <!-- DIRECTOR LOGIN CONTROL PANEL -->
+                <div id="directorPanel" class="director-panel">
+                    <!-- SECTION A: CHANGE DIRECTOR PHOTO -->
+                    <h4><i class="fas fa-camera"></i> Director Portal: Change Profile Photo</h4>
+                    <form id="directorPhotoForm" style="margin-bottom: 25px;">
+                        <div class="director-form-group">
+                            <label for="directorPhotoInput">Upload New Director Photo OR Enter Image URL:</label>
+                            <input type="file" id="directorPhotoInput" accept="image/*">
+                            <p
+                                style="text-align: center; margin: 5px 0; font-weight: bold; font-size: 12px; color: #777;">
+                                OR</p>
+                            <input type="url" id="directorPhotoUrlInput" placeholder="https://example.com/photo.jpg">
+                        </div>
+                        <button type="button" class="btn-view-result" style="width:100%; background:#00acc1;"
+                            onclick="updateDirectorPhoto()">Update Director Photo</button>
+                    </form>
+
+                    <!-- SECTION B: PUBLISH RESULT PDF -->
+                    <h4><i class="fas fa-upload"></i> Director Portal: Publish/Update Class Result PDF</h4>
+                    <form id="directorUploadForm" style="margin-bottom: 25px;">
+                        <div class="director-form-group">
+                            <label for="directorClassSelect">Select Class:</label>
+                            <select id="directorClassSelect" required>
+                                <option value="Class 1">Class 1</option>
+                                <option value="Class 2">Class 2</option>
+                                <option value="Class 3">Class 3</option>
+                                <option value="Class 4">Class 4</option>
+                                <option value="Class 5">Class 5</option>
+                                <option value="Class 6">Class 6</option>
+                                <option value="Class 7">Class 7</option>
+                                <option value="Class 8">Class 8</option>
+                                <option value="Class 9">Class 9</option>
+                                <option value="Class 10">Class 10</option>
+                                <option value="Class 11">Class 11</option>
+                                <option value="Class 12">Class 12</option>
+                            </select>
+                        </div>
+                        <div class="director-form-group">
+                            <label>PDF Attachment (File OR Direct Link):</label>
+                            <input type="file" id="directorPdfInput" accept=".pdf">
+                            <p
+                                style="text-align: center; margin: 5px 0; font-weight: bold; font-size: 12px; color: #777;">
+                                OR</p>
+                            <input type="url" id="directorPdfUrlInput" placeholder="https://example.com/result.pdf">
+                        </div>
+                        <button type="button" class="btn-view-result" style="width:100%; background:#004d66;"
+                            onclick="publishResult()">Publish / Update Result</button>
+                    </form>
+
+                    <!-- SECTION C: UPDATE FEE STRUCTURE -->
+                    <h4><i class="fas fa-calculator"></i> Director Portal: Update Fee Structure</h4>
+                    <form id="directorFeeForm" style="margin-bottom: 25px;">
+                        <div class="director-form-group">
+                            <label>Class Wing Title:</label>
+                            <input type="text" id="feeClassInput" placeholder="e.g. Nursery / Class 1" required>
+                        </div>
+                        <div class="director-form-group">
+                            <label>Admission Fee:</label>
+                            <input type="text" id="feeAdmissionInput" placeholder="e.g. ₹2,500" required>
+                        </div>
+                        <div class="director-form-group">
+                            <label>Monthly Tuition Fee:</label>
+                            <input type="text" id="feeTuitionInput" placeholder="e.g. ₹800" required>
+                        </div>
+                        <div class="director-form-group">
+                            <label>Transport / Van Fee:</label>
+                            <input type="text" id="feeTransportInput" placeholder="e.g. As per Distance" required>
+                        </div>
+                        <button type="button" class="btn-view-result" style="width:100%; background:#28a745;"
+                            onclick="addOrUpdateFeeRow()">Add / Update Fee Row</button>
+                    </form>
+
+                    <!-- SECTION D: CAMPUS GALLERY MANAGER -->
+                    <h4><i class="fas fa-images"></i> Director Portal: Add Campus Gallery Photo</h4>
+                    <form id="directorGalleryForm">
+                        <div class="director-form-group">
+                            <label>Upload Gallery Image OR Enter Image URL:</label>
+                            <input type="file" id="galleryFileInput" accept="image/*">
+                            <p
+                                style="text-align: center; margin: 5px 0; font-weight: bold; font-size: 12px; color: #777;">
+                                OR</p>
+                            <input type="url" id="galleryUrlInput" placeholder="https://example.com/campus.jpg">
+                        </div>
+                        <button type="button" class="btn-view-result" style="width:100%; background:#17a2b8;"
+                            onclick="addGalleryImage()">Add Photo to Gallery</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- GALLERY SECTION -->
     <section id="gallery">
         <div class="section-title">
             <h2>Campus Gallery</h2>
         </div>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80"
-                    alt="Classroom">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80"
-                    alt="Library">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80"
-                    alt="Computer Lab">
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1526976668912-1a811878dd37?auto=format&fit=crop&w=600&q=80"
-                    alt="Sports Grounds">
-            </div>
+        <div class="gallery-grid" id="galleryGrid">
+            <!-- Gallery images will load here -->
         </div>
     </section>
 
@@ -646,67 +1139,62 @@
         <div class="enquiry-container">
             <div class="enquiry-header">
                 <h2>Admission Enquiry (2026-27)</h2>
-                <p>Fill out the form below and our admission team will contact you shortly.</p>
+                <p>Fill out the form below and our admission coordinator will contact you shortly.</p>
             </div>
-
-            <form id="admissionForm">
+            <form id="enquiryForm">
+                <!-- Web3Forms Access Key & Configuration -->
                 <input type="hidden" name="access_key" value="64b5aabd-3dfe-4d26-bdb0-94380ac7bdd9">
-                <input type="hidden" name="subject" value="New Admission Enquiry - Gaurikulam School">
+                <input type="hidden" name="subject" value="gaurikulam New Admission Enquiry - Gaurikulam School">
 
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="studentName">Student Full Name *</label>
-                        <input type="text" id="studentName" name="Student Name" placeholder="Enter student's name"
-                            required>
+                        <label for="studentName">Student's Full Name *</label>
+                        <input type="text" id="studentName" name="Student_Name" required
+                            placeholder="Enter student's name">
                     </div>
-
                     <div class="form-group">
                         <label for="parentName">Parent / Guardian Name *</label>
-                        <input type="text" id="parentName" name="Parent Name" placeholder="Enter parent's name"
-                            required>
+                        <input type="text" id="parentName" name="Parent_Name" required
+                            placeholder="Enter parent's name">
                     </div>
-
                     <div class="form-group">
-                        <label for="classApplying">Class Seeking Admission *</label>
-                        <select id="classApplying" name="Class Seeking" required>
+                        <label for="contactMobile">Mobile Number *</label>
+                        <input type="tel" id="contactMobile" name="Mobile_Number" required
+                            placeholder="10-digit mobile number">
+                    </div>
+                    <div class="form-group">
+                        <label for="applyClass">Class Seeking Admission For *</label>
+                        <select id="applyClass" name="Seeking_Class" required>
                             <option value="" disabled selected>Select Class</option>
-                            <option value="Nursery / LKG / UKG">Nursery / LKG / UKG</option>
-                            <option value="Class 1 - 5">Class 1 to 5</option>
-                            <option value="Class 6 - 8">Class 6 to 8</option>
-                            <option value="Class 9 - 10">Class 9 to 10</option>
-                            <option value="Class 11 - 12">Class 11 to 12</option>
+                            <option value="Nursery/LKG/UKG">Nursery / LKG / UKG</option>
+                            <option value="Class 1 to 5">Class 1 to 5</option>
+                            <option value="Class 6 to 8">Class 6 to 8</option>
+                            <option value="Class 9 to 10">Class 9 to 10</option>
+                            <option value="Class 11 to 12">Class 11 to 12</option>
                         </select>
                     </div>
-
-                    <div class="form-group">
-                        <label for="phone">Mobile Number *</label>
-                        <input type="tel" id="phone" name="Phone Number" pattern="[0-9]{10}"
-                            placeholder="10-digit phone number" required>
-                    </div>
-
                     <div class="form-group full-width">
-                        <label for="message">Message / Query (Optional)</label>
-                        <textarea id="message" name="Message" rows="3" placeholder="Any specific questions?"></textarea>
+                        <label for="message">Address / Additional Remarks</label>
+                        <textarea id="message" name="Address_or_Remarks" rows="3"
+                            placeholder="Enter residential area / query..."></textarea>
                     </div>
                 </div>
-
-                <button type="submit" class="submit-btn" id="submitBtn">Submit Enquiry</button>
+                <button type="submit" id="submitBtn" class="submit-btn">Submit Admission Enquiry</button>
                 <div id="formResult" class="form-result"></div>
             </form>
         </div>
     </section>
-
+    <!-- FOOTER -->
     <footer id="contact">
         <div class="footer-content">
             <div class="contact-info">
                 <h3>Gaurikulam International Public School</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Address: Jalkhoridih, Giridih, Jharkhand</p>
-                <p><i class="fas fa-phone"></i> Call: +91 9958766895</p>
+                <p><i class="fas fa-map-marker-alt"></i> Jalkharidih, Giridih, Jharkhand</p>
+                <p><i class="fas fa-phone"></i> +91 9958766895</p>
+                <p><i class="fas fa-envelope"></i> arvindsingh0878@gmail.com </p>
             </div>
             <div class="login-buttons">
-                <button class="login-btn" onclick="openModal('Student')"><i class="fas fa-user-graduate"></i> Student
-                    Login</button>
-                <button class="login-btn" onclick="openModal('School')"><i class="fas fa-user-shield"></i> School
+                <button class="login-btn" onclick="openLoginModal('Director')"><i class="fas fa-user-lock"></i> Director
                     Login</button>
             </div>
         </div>
@@ -718,90 +1206,322 @@
     <!-- LOGIN MODAL -->
     <div id="loginModal" class="modal">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modalTitle" style="color:#004d66; margin-bottom: 15px;">Login</h2>
-            <input type="text" placeholder="User ID"
-                style="width:100%; padding:10px; margin-top:10px; border:1px solid #ccc; border-radius:4px;">
-            <input type="password" placeholder="Password"
-                style="width:100%; padding:10px; margin-top:10px; border:1px solid #ccc; border-radius:4px;">
-            <button
-                style="width:100%; padding:10px; background:#00acc1; color:white; border:none; margin-top:15px; cursor:pointer; border-radius:4px; font-weight:bold;">Login</button>
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h3 id="modalTitle" style="color: #004d66; margin-bottom: 15px;">Director Login</h3>
+            <div class="director-form-group">
+                <label>Username</label>
+                <input type="text" id="loginUsername" placeholder="Enter username">
+            </div>
+            <div class="director-form-group">
+                <label>Password</label>
+                <input type="password" id="loginPassword" placeholder="Enter password">
+            </div>
+            <button class="btn-view-result" style="width: 100%; margin-top: 10px;"
+                onclick="handleLogin()">Login</button>
+            <p id="loginError" style="color: red; font-size: 13px; margin-top: 10px; display: none;"></p>
         </div>
     </div>
 
+    <!-- JAVASCRIPT FOR LOGIC AND LOCALSTORAGE PERSISTENCE -->
     <script>
-        // Mobile Navigation Toggle
+        // --- MOBILE MENU TOGGLE ---
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
-
         mobileMenuBtn.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
 
-        // Close Mobile Menu on Click
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
+        // --- DEFAULT DATA STORES WITH LOCALSTORAGE ---
+        let isDirectorLoggedIn = false;
 
-        // Modal Controls
-        function openModal(type) {
-            document.getElementById('loginModal').style.display = 'flex';
-            document.getElementById('modalTitle').innerText = type + " Login";
+        // Default Fee Structure
+        const defaultFeeData = [
+            { classWing: 'Nursery / LKG / UKG', admissionFee: '₹2,500', tuitionFee: '₹800', transportFee: 'As per Distance' },
+            { classWing: 'Class 1 - Class 5', admissionFee: '₹3,000', tuitionFee: '₹1,000', transportFee: 'As per Distance' },
+            { classWing: 'Class 6 - Class 8', admissionFee: '₹3,500', tuitionFee: '₹1,200', transportFee: 'As per Distance' },
+            { classWing: 'Class 9 - Class 10', admissionFee: '₹4,000', tuitionFee: '₹1,500', transportFee: 'As per Distance' },
+            { classWing: 'Class 11 - Class 12', admissionFee: '₹5,000', tuitionFee: '₹2,000', transportFee: 'As per Distance' }
+        ];
+
+        // Default Campus Gallery Images
+        const defaultGalleryData = [
+            "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80",
+            "https://images.unsplash.com/photo-1523050853064-85049f3f9fde?auto=format&fit=crop&w=600&q=80"
+        ];
+
+        // Retrieve saved state or initialize
+        let feeData = JSON.parse(localStorage.getItem('gaurikulam_feeData')) || defaultFeeData;
+        let galleryData = JSON.parse(localStorage.getItem('gaurikulam_galleryData')) || defaultGalleryData;
+        let resultsData = JSON.parse(localStorage.getItem('gaurikulam_resultsData')) || {};
+        let savedDirectorPhoto = localStorage.getItem('gaurikulam_directorPhoto');
+
+        // INITIAL LOAD RENDERING
+        window.onload = function () {
+            renderFeeTable();
+            renderGallery();
+            if (savedDirectorPhoto) {
+                document.getElementById('directorDisplayPhoto').src = savedDirectorPhoto;
+            }
+        };
+
+        // --- RENDER FEE TABLE ---
+        function renderFeeTable() {
+            const tableBody = document.getElementById('feeTableBody');
+            tableBody.innerHTML = '';
+            feeData.forEach((item, index) => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>${item.classWing}</td>
+                    <td>${item.admissionFee}</td>
+                    <td>${item.tuitionFee}</td>
+                    <td>${item.transportFee}</td>
+                    <td class="director-action-col" style="${isDirectorLoggedIn ? '' : 'display:none;'}">
+                        <button style="background:#dc3545; color:white; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;" onclick="deleteFeeRow(${index})">Delete</button>
+                    </td>
+                `;
+                tableBody.appendChild(tr);
+            });
         }
-        function closeModal() {
+
+        // --- RENDER GALLERY ---
+        function renderGallery() {
+            const galleryGrid = document.getElementById('galleryGrid');
+            galleryGrid.innerHTML = '';
+            galleryData.forEach((imgUrl, index) => {
+                const div = document.createElement('div');
+                div.className = 'gallery-item';
+                div.innerHTML = `
+                    <img src="${imgUrl}" alt="Campus Gallery Image ${index + 1}">
+                    <button class="btn-delete-img" title="Delete Photo" onclick="deleteGalleryImage(${index})"><i class="fas fa-trash"></i></button>
+                `;
+                galleryGrid.appendChild(div);
+            });
+        }
+
+        // --- FETCH CLASS RESULT FOR STUDENTS ---
+        function fetchResult() {
+            const classVal = document.getElementById('studentClassSelect').value;
+            const outputArea = document.getElementById('resultOutput');
+
+            if (!classVal) {
+                outputArea.innerHTML = `<p style="color:red;">Please select a valid class first.</p>`;
+                return;
+            }
+
+            if (resultsData[classVal]) {
+                outputArea.innerHTML = `
+                    <h4 style="color:#004d66; margin-bottom:10px;">Result Available for ${classVal}</h4>
+                    <p style="color:#28a745; font-weight:bold;">Status: Updated by Director</p>
+                    <a href="${resultsData[classVal]}" target="_blank" class="pdf-btn"><i class="fas fa-file-pdf"></i> View / Download ${classVal} Result PDF</a>
+                `;
+            } else {
+                outputArea.innerHTML = `<p style="color:#666;">No updated result PDF found for <strong>${classVal}</strong>. Please check back later or contact school administration.</p>`;
+            }
+        }
+
+        // --- DIRECTOR CONTROL FUNCTIONS ---
+
+        // 1. Update Director Profile Photo
+        function updateDirectorPhoto() {
+            const fileInput = document.getElementById('directorPhotoInput');
+            const urlInput = document.getElementById('directorPhotoUrlInput').value;
+
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const newPhoto = e.target.result;
+                    document.getElementById('directorDisplayPhoto').src = newPhoto;
+                    localStorage.setItem('gaurikulam_directorPhoto', newPhoto);
+                    alert("Director profile photo updated successfully!");
+                }
+                reader.readAsDataURL(fileInput.files[0]);
+            } else if (urlInput.trim() !== '') {
+                document.getElementById('directorDisplayPhoto').src = urlInput;
+                localStorage.setItem('gaurikulam_directorPhoto', urlInput);
+                alert("Director profile photo updated successfully via URL!");
+            } else {
+                alert("Please select an image file OR enter an Image URL.");
+            }
+        }
+
+        // 2. Publish/Update Result PDF
+        function publishResult() {
+            const classVal = document.getElementById('directorClassSelect').value;
+            const pdfFile = document.getElementById('directorPdfInput');
+            const pdfUrl = document.getElementById('directorPdfUrlInput').value;
+
+            if (pdfFile.files && pdfFile.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    resultsData[classVal] = e.target.result;
+                    localStorage.setItem('gaurikulam_resultsData', JSON.stringify(resultsData));
+                    alert(`Result PDF published successfully for ${classVal}!`);
+                }
+                reader.readAsDataURL(pdfFile.files[0]);
+            } else if (pdfUrl.trim() !== '') {
+                resultsData[classVal] = pdfUrl;
+                localStorage.setItem('gaurikulam_resultsData', JSON.stringify(resultsData));
+                alert(`Result PDF link updated successfully for ${classVal}!`);
+            } else {
+                alert("Please attach a PDF file OR enter a valid PDF URL.");
+            }
+        }
+
+        // 3. Add/Update Fee Structure
+        function addOrUpdateFeeRow() {
+            const classWing = document.getElementById('feeClassInput').value;
+            const admissionFee = document.getElementById('feeAdmissionInput').value;
+            const tuitionFee = document.getElementById('feeTuitionInput').value;
+            const transportFee = document.getElementById('feeTransportInput').value;
+
+            if (!classWing || !admissionFee || !tuitionFee || !transportFee) {
+                alert("Please fill all fields for the fee structure.");
+                return;
+            }
+
+            // Check if class already exists to update
+            const existingIdx = feeData.findIndex(item => item.classWing.toLowerCase() === classWing.toLowerCase());
+            if (existingIdx !== -1) {
+                feeData[existingIdx] = { classWing, admissionFee, tuitionFee, transportFee };
+            } else {
+                feeData.push({ classWing, admissionFee, tuitionFee, transportFee });
+            }
+
+            localStorage.setItem('gaurikulam_feeData', JSON.stringify(feeData));
+            renderFeeTable();
+            alert("Fee structure updated successfully!");
+            document.getElementById('directorFeeForm').reset();
+        }
+
+        function deleteFeeRow(index) {
+            if (confirm("Are you sure you want to delete this fee row?")) {
+                feeData.splice(index, 1);
+                localStorage.setItem('gaurikulam_feeData', JSON.stringify(feeData));
+                renderFeeTable();
+            }
+        }
+
+        // 4. Campus Gallery Manager
+        function addGalleryImage() {
+            const fileInput = document.getElementById('galleryFileInput');
+            const urlInput = document.getElementById('galleryUrlInput').value;
+
+            if (fileInput.files && fileInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    galleryData.push(e.target.result);
+                    localStorage.setItem('gaurikulam_galleryData', JSON.stringify(galleryData));
+                    renderGallery();
+                    alert("Photo added to Campus Gallery successfully!");
+                }
+                reader.readAsDataURL(fileInput.files[0]);
+            } else if (urlInput.trim() !== '') {
+                galleryData.push(urlInput);
+                localStorage.setItem('gaurikulam_galleryData', JSON.stringify(galleryData));
+                renderGallery();
+                alert("Photo added to Campus Gallery successfully!");
+            } else {
+                alert("Please select an image file OR enter an Image URL.");
+            }
+        }
+
+        function deleteGalleryImage(index) {
+            if (confirm("Are you sure you want to delete this photo from the gallery?")) {
+                galleryData.splice(index, 1);
+                localStorage.setItem('gaurikulam_galleryData', JSON.stringify(galleryData));
+                renderGallery();
+            }
+        }
+
+        // --- LOGIN MODAL & AUTHENTICATION ---
+        function openLoginModal(role) {
+            document.getElementById('modalTitle').innerText = role + ' Login';
+            document.getElementById('loginModal').style.display = 'flex';
+            document.getElementById('loginError').style.display = 'none';
+        }
+
+        function closeLoginModal() {
             document.getElementById('loginModal').style.display = 'none';
         }
 
-        // Web3Forms Form Submission
-        const form = document.getElementById('admissionForm');
-        const result = document.getElementById('formResult');
-        const submitBtn = document.getElementById('submitBtn');
+        function handleLogin() {
+            const u = document.getElementById('loginUsername').value;
+            const p = document.getElementById('loginPassword').value;
 
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+            if (u === 'director' && p === 'admin123') {
+                isDirectorLoggedIn = true;
+                alert('Login Successful! Director Panel Unlocked.');
+                closeLoginModal();
+                document.getElementById('directorPanel').style.display = 'block';
+                document.body.classList.add('director-mode');
 
-            submitBtn.innerText = "Sending...";
-            submitBtn.disabled = true;
+                // Show action column in fee table
+                document.querySelectorAll('.director-action-col').forEach(el => el.style.display = 'table-cell');
+                renderFeeTable();
+            } else {
+                const err = document.getElementById('loginError');
+                err.innerText = 'Invalid Director Credentials! (Default: director / admin123)';
+                err.style.display = 'block';
+            }
+        }
 
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
 
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: json
-            })
-                .then(async (response) => {
-                    let res = await response.json();
-                    if (response.status == 200) {
-                        result.style.color = "#28a745";
-                        result.innerText = "Thank you! Enquiry submitted successfully.";
-                        form.reset();
-                    } else {
-                        result.style.color = "#dc3545";
-                        result.innerText = res.message || "Invalid Access Key!";
-                    }
+        // --- ENQUIRY FORM SUBMISSION (WEB3FORMS INTEGRATION) ---
+        const enquiryForm = document.getElementById('enquiryForm');
+        if (enquiryForm) {
+            enquiryForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                const res = document.getElementById('formResult');
+                const btn = document.getElementById('submitBtn');
+
+                if (res) {
+                    res.style.color = '#004d66';
+                    res.innerText = 'Sending enquiry, please wait...';
+                }
+                if (btn) btn.disabled = true;
+
+                const formData = new FormData(this);
+                const object = Object.fromEntries(formData);
+                const json = JSON.stringify(object);
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
                 })
-                .catch(error => {
-                    result.style.color = "#dc3545";
-                    result.innerText = "Error submitting form. Please check your connection.";
-                })
-                .finally(() => {
-                    submitBtn.innerText = "Submit Enquiry";
-                    submitBtn.disabled = false;
-                    setTimeout(() => {
-                        result.innerText = "";
-                    }, 6000);
-                });
-        });
+                    .then(async (response) => {
+                        let resJson = await response.json();
+                        if (response.status === 200 && resJson.success) {
+                            if (res) {
+                                res.style.color = 'green';
+                                res.innerText = 'Thank you! Your enquiry has been submitted successfully. School team will get back to you soon.';
+                            }
+                            this.reset();
+                        } else {
+                            if (res) {
+                                res.style.color = 'red';
+                                res.innerText = resJson.message || 'Submission failed! Please check Access Key.';
+                            }
+                        }
+                    })
+                    .catch((error) => {
+                        console.error('Submission Error:', error);
+                        if (res) {
+                            res.style.color = 'red';
+                            res.innerText = 'Network error! Please check your internet connection.';
+                        }
+                    })
+                    .finally(() => {
+                        if (btn) btn.disabled = false;
+                    });
+            });
+        }    
     </script>
-
 </body>
 
 </html>
