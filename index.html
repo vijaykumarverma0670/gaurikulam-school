@@ -844,8 +844,8 @@
     <header id="home">
         <div class="header-top">
             <div class="logo-container">
-                <img src="logo.png" alt="Gaurikulam School Logo"
-                    onerror="this.src='https://via.placeholder.com/200x70?text=Gaurikulam+School'">
+                <h2 style="font-size: 22px; font-weight: bold; color: #2c3e50; margin: 0; font-family: sans-serif;">
+                    Gaurikulam  School</h2>
             </div>
             <div class="menu-toggle" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
@@ -883,7 +883,8 @@
     </section>
 
     <!-- DIRECTOR ABOUT SECTION -->
-   <section id="director-about" style="padding-top: 40px;">
+    <!-- DIRECTOR ABOUT SECTION -->
+    <section id="director-about" style="padding-top: 40px;">
         <div class="section-title">
             <h2>Director's Desk</h2>
         </div>
@@ -1085,6 +1086,21 @@
         </div>
     </section>
 
+    <!-- JS Function for Read More Toggle -->
+    <script>
+        function toggleDirectorContent() {
+            var moreContent = document.getElementById("moreDirectorContent");
+            var btn = document.getElementById("readMoreBtn");
+
+            if (moreContent.style.display === "none") {
+                moreContent.style.display = "block";
+                btn.innerHTML = "Read Less";
+            } else {
+                moreContent.style.display = "none";
+                btn.innerHTML = "Read More";
+            }
+        }
+    </script>
     <!-- ACADEMICS SECTION -->
     <section id="academics">
         <div class="section-title">
